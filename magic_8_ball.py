@@ -1,7 +1,7 @@
 import random
 import importlib
 from array import *
-import check_profanity
+from check_profanity import checkProfanity
 
 #def magic():
 
@@ -16,6 +16,12 @@ def m8Ball():
 
     #TODO
     #Implement profanity checker here
+    checker_answer = checkProfanity(question)
+    #print(type(checker_answer))
+    #print(checker_answer)
+    if checker_answer is True:
+        print("You are bad!")
+
 
     #Store the question
     F_question = open('questions.txt', 'a', encoding = 'UTF-8')
